@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <script>
+        function calculator(){
+            var num1=parseFloat(prompt("Enter a first number"));
+            var num2=parseFloat(prompt("Enter a Second number"));
+            var operator=prompt("Enter the operator (+, -, *, /):");
+            var result;
+            if(isNaN(num1)||isNaN(num2)){
+                alert("Error: Please enter valid numbers.");}
+                else {
+                switch(operator){
+                    case"+":
+                    result=num1+num2;
+                break;
+
+                case"-":
+                result=num1-num2;
+                break;
+
+                case"*":
+                result=num1*num2;
+                break;
+
+                case "/":
+                    result=num1/num2;
+                    break;
+                    default:
+                        alert("Error: Invalid operator. Please use +, -, *, or /.");
+                        return;
+                }
+                alert("Your Result Is = " +result);
+            }
+        
+
+        }
+        calculator();
+   
+    </script>
+</body>
+</html>
